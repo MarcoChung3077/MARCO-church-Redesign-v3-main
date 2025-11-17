@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* Stolen From UIverse */
+.nav-action {
+	margin-top: 30px;
+	background-color: #1877F2;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	animation: sway 2s infinite alternate;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 500px;
+	transition: transform 0.5s, box-shadow 0.5s;
+
+}
+
+.nav-action:hover {
+	transform: rotate(-360deg);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 255, 0.5);
+}
+
+@keyframes grow {
+	0% {
+	transform: scale(1);
+	}
+
+	100% {
+	transform: scale(10);
+	}
+}
+
+@keyframes glow {
+	0% {
+	text-shadow: gold 1px 1px 1px;
+	}
+
+	100% {
+	text-shadow: gold 0 0 10px gold;
+	}
+}
+
+.icon {
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+	transition: transform 0.5s;
+	position: relative;
+	left: -16px;
+	top: -5px;
+}
+
+.icon:hover {
+	transform: scale(1.25);
+	filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.9))
+}
+
+.follow-text {
+	color: white;
+	position: relative;
+	top: 3em;
+	left: -4em;
+	transition: transform 0.5s;
+}
+
+.follow-text:hover {
+	transform: scale(1.2);
+	color: rgba(31,81,255,100);
+	filter: drop-shadow(2px 2px 4px rgba(31,81,255,2.0))
+}
+
+/* End of Stolen */

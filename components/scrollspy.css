@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.scroll-spy-main {
+    display: flex;
+    flex-direction: column;
+    height: var(--h-s2-right);
+    max-width: 200px;
+    background-color: var(--color-font-white);
+    justify-content: center;
+
+    border-right: none !important;
+    border-left: none !important;
+
+    padding: 0px 20px;
+
+    border: solid;
+  }
+  
+  .scroll-spy-value {
+    height: 90px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: var(--color-font-black);
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+
+	text-align: left;
+ 
+    border-bottom: solid 2.25px;
+  }
+  
+  .scroll-spy-value:not(:active):hover,
+  .scroll-spy-value:focus {
+    background-color: var(--color-highlight);
+    border-radius: 4px;
+    color: white;
+    border: none;
+  }
+  
+  .scroll-spy-value:focus,
+  .scroll-spy-value:active {
+    background-color: var(--color-primary-2);
+    outline: none;
+    border-bottom: solid 2.25px var(--color-font-black);
+    border-radius: 0px;
+  }
+  
+  .scroll-spy-value::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: var(--color-highlight);
+    border-radius: 0px 5px 5px 0px;
+    opacity: 0;
+  }
+  
+  .scroll-spy-value:focus::before,
+  .scroll-spy-value:active::before {
+	opacity: 1;
+  }
+  
+  .scroll-spy-value svg {
+    width: 15px
+  }
+  
+  .scroll-spy-main:hover > :not(.scroll-spy-value:hover) {
+    transition: 300ms;
+    filter: blur(1px);
+    transform: scale(0.95,0.95);
+  }
+
+  .scroll-spy-value h3 {
+    font-weight: 700;
+  }

@@ -1,0 +1,94 @@
+/* Depreciated Nav Bar Design */
+/*
+<nav class="container-fluid nav-v1" style="overflow: hidden;">
+<div class="row" style="height: 100%;">
+
+    <div class="col-4 nav-v1-col-header" style="height: 100%;">
+        <h1 lang="zh-HK" class="v-center"><a href="https://dwk.hkskh.org/divinelove/index.aspx">聖公會主愛堂</a></h1>
+    </div>
+
+    <div class="col-6">                    
+        <ul class="v-center">
+            <a lang="zh-HK" href=""><li>首頁</li></a>
+            <a lang="zh-HK" href="subpages/events/events.html"><li>活動</li></a>
+            <a lang="zh-HK" href="subpages/duty/duty.html"><li>輪值表</li></a>
+            <a lang="zh-HK" href="subpages/sermons/sermons.html"><li>過往講道</li></a>
+            <a lang="zh-HK" href="subpages/gallery/gallery.html"><li>圖片庫</li></a>
+            <a lang="zh-HK" href="subpages/contact/contact.html"><li>聯絡我們</li></a>
+        </ul>
+    </div>
+
+    <div class="col text-end nav-v1-col-action" style="height:100%;">
+        <button class="nav-action">
+            <link href="components/spin-fb.css" rel="stylesheet">
+            <a href="https://www.facebook.com/JDmOwO">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" width="41" height="41" viewBox="0 0 50 50" class="icon icons8-Facebook-Filled">
+                <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z" fill="#ffffff"></path>
+            </svg>
+            </a>
+        </button><br>
+    </div>
+
+</div>
+</nav>
+*/
+
+.nav-v1 {
+    width: 100%;
+    height: 80px;
+
+	padding: 0px 30px !important;
+    
+    background-color: var(--color-primary-1);
+    color: var(--color-font-white);
+
+    position: sticky;
+	top: 0px;
+
+    filter: drop-shadow(0px 0px 10px var(--color-font-white));
+
+	z-index: 1000;
+}
+
+.nav-v1 a {
+    color: var(--color-font-white);
+    text-decoration: none;
+}
+
+.nav-v1-col-header {
+    max-width: 200px !important;
+}
+
+.nav-v1 h1 {
+    font-size: 25px;
+    font-weight: 600;
+
+    padding-left: 1vw;
+}
+
+.nav-v1 ul, nav li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.nav-v1 ul {
+    height: 100%;
+    padding: 5px 0px 0px 0px;
+}
+
+.nav-v1 li {
+    padding: 19.5px 15px;
+    margin: 0px 0px 15px 0px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.nav-v1 li:hover {
+    background-color: var(--color-highlight);
+}
+
+.nav-v1-col-action {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

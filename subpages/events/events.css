@@ -1,0 +1,146 @@
+@charset "utf-8";
+body{
+	--color-select: #f1f1f1;
+}
+/* start of Calendar */
+.calendar {
+	margin: 0 -10vh 60px 10% !important;
+	width: 80% !important;
+	background-color: #fff;
+	filter: drop-shadow(0 0 5px var(--color-shadow));
+	border-radius: 25px;
+}
+
+.calendar-header {
+	height: 160px;
+	padding: 0px 20px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 30px;
+}
+
+.calendar-header button {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	transition: 0.3s;
+	line-height: 0px;
+	margin: auto 0px;
+	border: solid var(--color-select);
+	color: var(--color-font-black);
+	background-color: var(--color-select);
+	font-size: 1.5em;
+	cursor: pointer;
+	filter: drop-shadow(0 0 5px var(--color-shadow));
+}
+
+.calendar-header button:hover {
+	background-color: var(--color-highlight);
+	border-color: var(--color-highlight);
+	color: var(--color-font-white);
+}
+
+#month-year {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.calendar-weekdays, .calendar-dates {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays div, .calendar-dates div {
+	text-align: center;
+	padding: 10px;
+}
+
+.calendar-weekdays {
+	background-color: #eaeef3;
+}
+
+.calendar-weekdays div {
+	font-weight: bold;
+}
+
+.calendar-dates div {
+	height: 60px;
+	border-bottom: 1px solid #eaeef3;
+	cursor: pointer;
+}
+
+.calendar-dates div:hover {
+	border-radius: 5px;
+	background-color: var(--color-select);
+	border: solid var(--color-highlight);
+}
+
+.event-date {
+	background-color: var(--color-primary-2);
+	color: var(--color-font-white);
+	border-radius: 5px;
+}
+
+.event-date:hover {
+	border-radius: 5px;
+	border: solid var(--color-highlight);
+	background-color: var(--color-primary-2) !important;
+}
+
+.current-date {
+	background-color: var(--color-highlight);
+	color: var(--color-font-white);
+	border-radius: 5px;
+}
+
+/* End of Calendar */
+
+.s2 {
+	width: 80vw;
+	height: 750px;
+	background-color: var(--color-font-white);
+	border-radius: 25px 25px 0px 0px;
+	border-bottom: none;
+	margin: 0px auto;
+	padding: 30px 40px;
+	filter: drop-shadow(0 0 5px var(--color-shadow));
+}
+
+.s2 h2 {
+	font-size: 60px;
+	font-weight: 700;
+}
+
+.s2 h6 {
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.s2-img {
+	height: 300px;
+	width: 100%;
+	margin: 30px auto;
+	border-radius: 20px;
+	overflow: hidden;
+	filter: drop-shadow(0 0 5px var(--color-shadow));
+}
+
+.s2-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.s2 p {
+	height: 220px;
+
+	font-size: 20px;
+	padding: 0px 10px 0px 0px;
+
+	text-align: justify;
+	text-justify: inter-word;
+	
+}

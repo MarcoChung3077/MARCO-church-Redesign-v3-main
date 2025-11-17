@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<title>聖公會主愛堂 - 圖片庫</title>
+		<link rel="icon" type="images/x-icon" href="../../images/common/emblem.ico">
+				
+		<!-- Preconnect to Google Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Font Downloads -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+		<!-- CSS Link -->
+		<link href="../../common.css" rel="stylesheet">
+		<link href="gallery.css" rel="stylesheet">
+
+		<!--Scroll To Top-->
+		<script>
+			function scrollToTop() {
+				window.scrollTo({
+				top: 0,
+				behavior: 'smooth' // Smooth scroll
+				});
+			}
+			
+			// Show button when scrolling down
+			window.onscroll = function() {
+				const button = document.getElementById('scrollToTop');
+				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				button.style.display = 'block'; // Show button
+				} else {
+				button.style.display = 'none'; // Hide button
+				}
+			};
+		</script>
+	</head>
+
+	<body class="body-main">
+
+		<!-- GSAP -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+
+		<!-- BootStrap -->
+		<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js "></script>
+		<link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css " rel="stylesheet">
+		
+		<!-- JQuery -->
+		<script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+
+		<!-- Start of NavBar v2 -->
+		<nav class="nav-flex">
+			<ul lang="zh-HK">
+				<li><a href="https://dwk.hkskh.org/divinelove/index.aspx">	聖公會主愛堂	</a></li>
+				<li><a href="../../index.html">								首頁			</a></li>
+				<li><a href="../events/events.html">						活動			</a></li>
+				<li><a href="../duty/duty.html">							輪值表			</a></li>
+				<li><a href="../sermons/sermons.html">						過往講道		</a></li>
+				<li><a href="../gallery/gallery.html">						圖片庫			</a></li>
+				<li><a href="../contact/contact.html">						聯絡我們		</a></li>
+				<li onclick=sideNavShow()><img src="../../images/common/sidebar.svg" height="35px"></li>
+				<li>
+					<div>
+						<button class="nav-action">
+							<link href="../../components/spin-fb.css" rel="stylesheet">
+							<a href="https://www.facebook.com/JDmOwO" class="nav-fb">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" width="41" height="41" viewBox="0 0 50 50" class="icon icons8-Facebook-Filled">
+								<path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z" fill="#ffffff"></path>
+							</svg>
+							</a>
+						</button><br>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Start of Sidebar -->
+		<div class="nav-side-bg">
+			<nav class="nav-side font-HK">
+				<li><a href="https://dwk.hkskh.org/divinelove/index.aspx">	聖公會主愛堂	</a></li>
+
+				<li onclick=sideNavHide()>
+					<p class=" v-center">關閉此視窗</p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: relative; top: 4px;">
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+						<polyline points="12 5 19 12 12 19"></polyline>
+					</svg>
+				</li>
+
+				<li><a href="../../index.html">								首頁			</a></li>
+				<li><a href="../events/events.html">						活動			</a></li>
+				<li><a href="../duty/duty.html">							輪值表			</a></li>
+				<li><a href="../sermons/sermons.html">						過往講道		</a></li>
+				<li><a href="../gallery/gallery.html">						圖片庫			</a></li>
+				<li><a href="../contact/contact.html">						聯絡我們		</a></li>
+			</nav>
+		</div>
+		<!-- End of Sidebar -->
+
+		<!-- JS for the Sidebar -->
+		<script>
+			function sideNavShow() {
+				const sideNavBG = document.querySelector(".nav-side-bg");
+				const sideNav = document.querySelector(".nav-side");
+
+				sideNavBG.classList.add("show");
+				sideNav.classList.add("show");
+
+				document.body.style.overflow = "hidden";
+			}
+
+			function sideNavHide() {
+				const sideNavBG = document.querySelector(".nav-side-bg");
+				const sideNav = document.querySelector(".nav-side");
+
+				sideNavBG.classList.remove("show");
+				sideNav.classList.remove("show");
+
+				document.body.style.overflow = "";
+			}
+		</script>
+		<!-- End of Sidebar JS -->
+		<!-- End of NavBar v2 -->
+		
+		<!-- Start of Banner -->
+		<header><img src="../../images/index/header.jpg"></header>
+		<!-- End of Banner-->
+
+		<!-- Start of Section 1 -->
+		<div class="s-header-c">
+			<div class="s-header-m">
+				<h2>
+					<span class="chi">圖片庫</span>
+					<span class="eng">Gallery</span>
+				</h2>
+			</div>
+		</div>
+
+
+		<section class="container-fluid g-0">
+			<div class="row gallery-row g-0 s1-row1">
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/church-1.jpg', '教堂設計預想圖')" style="margin-left: 20px;">
+					<img src="images/church-1.jpg">
+				</div>
+
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-1.jpg', '2021年4月30日 專業團契—合團分享' )" style="margin-left: 20px;">
+					<img src="images/event-1.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-2.jpg', '2021年4月30日 專業團契—合團分享')" style="margin-left: 20px;">
+					<img src="images/event-2.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-3.jpg', '2021年4月30日 專業團契—合團分享')" style="margin-left: 20px;">
+					<img src="images/event-3.jpg">
+				</div>
+
+				<!-- Repeat -->
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/church-1.jpg', '教堂設計預想圖')" style="margin-left: 20px;">
+					<img src="images/church-1.jpg">
+				</div>
+
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-1.jpg', '2021年4月30日 專業團契—合團分享' )" style="margin-left: 20px;">
+					<img src="images/event-1.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-2.jpg', '2021年4月30日 專業團契—合團分享')" style="margin-left: 20px;">
+					<img src="images/event-2.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row1 g-0" onclick="modalShow('#slide-modal' , 'images/event-3.jpg', '2021年4月30日 專業團契—合團分享')" style="margin-left: 20px;">
+					<img src="images/event-3.jpg">
+				</div>
+			</div>
+
+			<div class="row gallery-row-staggered g-0 s1-row2">
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-4.jpg', '2017年3月08日 2017 大齋期牧者退修會')" style="margin-left: 20px;">
+					<img src="images/event-4.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-5.jpg', '2017年3月08日 2017 大齋期牧者退修會')">
+					<img src="images/event-5.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-6.jpg', '2017年3月08日 2017 大齋期牧者退修會')">
+					<img src="images/event-6.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/church-2.jpg', '教堂設計預想圖')">
+					<img src="images/church-2.jpg">
+				</div>
+
+				<!-- Repeat -->
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-4.jpg', '2017年3月08日 2017 大齋期牧者退修會')" style="margin-left: 20px;">
+					<img src="images/event-4.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-5.jpg', '2017年3月08日 2017 大齋期牧者退修會')">
+					<img src="images/event-5.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/event-6.jpg', '2017年3月08日 2017 大齋期牧者退修會')">
+					<img src="images/event-6.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row2 g-0" onclick="modalShow('#slide-modal' , 'images/church-2.jpg', '教堂設計預想圖')">
+					<img src="images/church-2.jpg">
+				</div>
+			</div>
+
+			<div class="row gallery-row g-0 s1-row3">
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-7.jpg', '2017年2月28日	教育及培育(第9期)分享會')" style="margin-left: 20px;">
+					<img src="images/event-7.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-8.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-8.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-9.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-9.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-10.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-10.jpg">
+				</div>
+
+				<!-- Repeat -->
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-7.jpg', '2017年2月28日	教育及培育(第9期)分享會')" style="margin-left: 20px;">
+					<img src="images/event-7.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-8.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-8.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-9.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-9.jpg">
+				</div>
+				
+				<div class="gallery-slide slide-row3 g-0" onclick="modalShow('#slide-modal' , 'images/event-10.jpg', '2017年2月28日	教育及培育(第9期)分享會')">
+					<img src="images/event-10.jpg">
+				</div>
+			</div>
+
+			<script src="../../scripts/loop-horizontal.js"></script>
+			<script>loopHorizontal(".slide-row1", ".s1-row1", 0.1 );</script>
+			<script>loopHorizontal(".slide-row2", ".s1-row2", 0.175 );</script>
+			<script>loopHorizontal(".slide-row3", ".s1-row3", 0.25 );</script>
+
+		</section>
+		<!-- End of Section 1 -->
+
+		<section>
+			<!-- Modal -->
+			<div class="modal fade" id="slide-modal" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<div class="modal-header">
+							<h5 class="modal-title h-center" id="exampleModalLongTitle" lang="zh-HK">預覽</h5>
+						</div>
+
+						<div class="modal-body">
+							<img class="modal-image" src="images/church-1.jpg" alt="No Images here">
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" lang="zh-HK" onclick="modalHide('#slide-modal')">關閉</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<script>
+				function modalShow(modal, image, title) {
+					$(modal).modal('show')
+					$(".modal-image").attr("src", image)
+					$(".modal-title").text(title);
+				}
+
+				function modalHide(modal) {
+					$(modal).modal('hide')
+				}
+			</script>
+
+		</section>
+
+		<div class="extender"></div>
+
+		<div class="row footer-credit g-0">
+			<div class="col-12 text-center">
+				<a href="https://github.com/IHOKE/AST10926-Church-Redesign-v3"><h2 class="v-center">Website presented by <b>Designation HKE</b> - Founded by <b>IHOKE</b></h2></a>
+			</div>
+		</div>
+			
+			<!-- Start of Footer -->
+			<footer>
+				<div class="row fot-row">
+				<div class="col-4 fot-col">
+					<div class="logo-container">
+					<img src="../../images/common/emblem.svg" alt="Logo" class="logo">
+					<h6>
+						<span class="chi">聖公會主愛堂</span>
+						<span class="eng">Church of Divine Love</span>
+					</h6>
+					</div>
+					<p>
+						<span class="chi">聖公會主愛堂隸屬於聖公會，致力於宣揚基督的教導和服務社區。主愛堂通常會舉行各種宗教活動、崇拜和社區服務，並且為信徒提供靈性上的支持。教堂的設計往往融合了傳統與現代的元素，提供一個靜謐的環境供人靈修和反思。</span>
+						<span class="eng">The Episcopal Church of the Lord's Love is affiliated with the Episcopal Church and is committed to proclaiming the teachings of Christ and serving the community. The Church of the Lord's Love typically holds a variety of religious programs, worship services, and community services, and provides spiritual support for its members. The design of the church is often a blend of traditional and modern elements, providing a quiet environment for spirituality and reflection. Translated with DeepL.com (free version)</span>
+					</p>
+				</div>
+				
+				<div class="col fot-col">
+					<h3>
+						<span class="chi">地址</span>
+						<span class="eng">Address</span>
+						<div class="line"><span></span></div>
+					</h3>
+					<a href="https://maps.app.goo.gl/H6TnAkTS7bFM9z5c6">
+					<p>
+						<span class="chi">聖公會主愛小學</span>
+						<span class="eng">HKSKH School of Divine Love</span>
+					</p>
+					<p>
+						<span class="chi">童子街45號, 石蔭, 葵涌, 新界</span>
+						<span class="eng">45 Tung Tsz Street, Shek Yam, Kwai Chung, New Territories</span>
+					</p>
+					</a>
+					<p class="email"><a href="mailto:divinelovehk@yahoo.com.hk">divinelovehk@yahoo.com.hk</a></p>
+					<p>+852 2420 5528</p>
+				</div>
+				
+				<div class="col fot-col">
+					<h3>
+						<span class="chi">連結</span>
+						<span class="eng">Link</span>
+						<div class="line"><span></span></div>
+					</h3>
+					<ul>
+						<li><a href="index.html">
+							<span class="chi">首頁</span>
+							<span class="eng">Homepage</span>
+						</a></li>
+
+						<li><a href="subpages/events/events.html">
+							<span class="chi">活動</span>
+							<span class="eng">Events</span>
+						</a></li>
+
+						<li><a href="subpages/duty/duty.html">				
+							<span class="chi">輪值表</span>
+							<span class="eng">Duties</span>
+						</a></li>
+
+						<li><a href="subpages/sermons/sermons.html">
+							<span class="chi">過往講道</span>
+							<span class="eng">Sermons</span>
+						</a></li>
+
+						<li><a href="subpages/gallery/gallery.html">
+							<span class="chi">圖片庫</span>
+							<span class="eng">Gallery</span>
+						</a></li>
+						
+						<li><a href="subpages/contact/contact.html">
+							<span class="chi">聯絡我們</span>
+							<span class="eng">Contact</span>
+						</a></li>
+					</ul>
+				</div>
+				
+				<div class="col fot-col">
+					<h3>
+						<span class="chi">通訊</span>
+						<span class="eng">Contact</span>
+						<div class="line"><span></span></div>
+					</h3>
+					<form>
+						<div class="inputBox">
+							<input type="email" required>
+							<span class="chi">輸入您的電子郵件</span>
+							<span class="eng">Enter your email</span>
+						</div>
+						<input class="btn btn-primary sub-btn chi" type="submit" value="提交">
+					</form>
+				
+				</div>
+				</div>
+			</footer>
+			<!-- End of Footer -->
+			<button id="scrollToTop" onclick="scrollToTop()" style="display: none;">↑</button>
+	</body>
+
+</html>

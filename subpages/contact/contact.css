@@ -1,0 +1,245 @@
+@charset "utf-8";
+.contact{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	padding: 0px 100px 20px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.information{
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	border-radius: 25px 25px 0 0;
+	background: var(--color-primary-1);
+	margin-top: 0px;
+}
+
+.information .contactInfo{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 30px;
+}
+
+.information .contactInfo .box{
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+}
+.information .contactInfo .icon{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: repeating-conic-gradient(from 30deg, #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.information .contactInfo .box .icon::before{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-conic-gradient(from 117.5deg, #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+}
+.information .contactInfo .box .icon::after{
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: var(--color-primary-1);
+}
+
+.information .contactInfo .box .icon b{
+	position: absolute;
+	inset: 8px;
+	background: #A1E3F8;
+	z-index: 2;
+}
+.information .contactInfo .box .icon svg{
+	position: relative;
+	z-index: 1000;
+	color: var(--color-primary-1);
+	width: 30px;
+}
+.information .contactInfo .box .text{
+	width: 90%;
+	position: relative;
+	flex-direction: column;
+	margin-left: 20px;
+	padding-right: 10%;
+	font-size: 18px;
+	color: #A1E3F8;
+	font-family: 300;
+}
+.information .contactInfo .box .text h3{
+	font-weight: 600;
+	font-size: 50px;
+}
+.information .contactInfo .box .text a{
+	text-decoration: none;
+	color: #fff;
+}
+.information .contactInfo .box .text a:hover{
+	text-decoration: underline;
+}
+.information .contactInfo .box .text p{
+	color: #fff;
+}
+.information .contactInfo .connect-title{
+	color: #ffffff;
+	margin-top: 50px;
+	padding-left: 15px;
+	line-height: 1em;
+	border-left: 50px solid #A1E3F8;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.box-extra-mar{
+	margin: 0 0 0 2vw;
+}
+
+.contact-sci {
+	position: relative;
+	padding-left: 50px;
+}
+
+.contactForm-c{
+	padding: 3vh 1vw;
+	background-color: var(--color-primary-1);
+	border-radius: 0 0 15px 15px;
+}
+
+.contactForm{
+	position: relative;
+	width: 100%;
+	background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+	animation: animate 6s linear infinite;
+	padding: 60px;
+	display: flex;
+	flex-direction: column;
+}
+@property --a{
+	syntax: '<angle>';
+	inherits: false;
+	initial-value: 0deg;
+}
+@keyframes animate{
+	0%{
+		--a: 0deg;
+	}
+	100%{
+		--a:360deg;
+	}
+}
+.contactForm::before{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-conic-gradient(from var(--a), #A1E3F8 0%,#A1E3F8 10%, transparent 10%,transparent 50%);
+	animation: animate 6s linear infinite;
+	animation-delay: -1.5s;
+}
+.contactForm::after{
+	content: '';
+	position: absolute;
+	inset: 2px;
+	border: 20px solid var(--color-primary-1);
+	background: #68a1df;
+}
+.contactForm form{
+	position: relative;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	gap: 4vw;
+}
+.contactForm form .inputBox:last-child {
+	display: flex;               /* Enable flexbox for the last input box */
+	justify-content: flex-end;   /* Align the button to the right */
+}
+.contactForm h2{
+	font-weight: 600;
+	font-size: 60px;
+	color: var(--color-primary-1);
+	z-index: 500;
+}
+.contactForm form .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.contactForm form .inputBox input{
+	width: 100%;
+	padding: 5px 0;
+	margin: 10px 0;
+	border: none;
+	background: transparent;
+	border-bottom: 2px solid var(--color-primary-1);
+	color: #fff;
+	outline: none;
+	resize: none;
+}
+
+.contactForm form .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	margin: 10px 0;
+	color: #fff;
+	transition: 0.5s;
+	font-weight: 400;
+	font-size: 22px;
+}
+.contactForm form .inputBox input:focus ~ span,
+.contactForm form .inputBox textarea:focus ~ span,
+.contactForm form .inputBox input:valid ~ span,
+.contactForm form .inputBox textarea:valid ~ span{
+	color: var(--color-primary-1);
+	font-size: 16px;
+	transform: translateY(-24px);
+}
+
+.contactForm form .inputBox .sub-btn{
+	width: 100px;
+	font-weight: 700;
+	display: inline-block;
+	background: transparent;
+	border: 2px solid var(--color-white);
+	border-radius: 40px;
+	text-decoration: none;
+	color: var(--color-white);
+}
+.contactForm form .inputBox .sub-btn:hover{
+	background-color: #fff;
+	color: var(--color-primary-1);
+	box-shadow: 0 0 10px var(--color-white);
+}
+
+.googleMap{
+	border-radius: 15px;
+	z-index: 1000;
+	height: 40vh;
+	width: 100%;
+}
+
+@media(max-width:768px){
+	.contactForm form, .information{
+		flex-direction: column;
+	}
+}
+
+@media(max-width: 1200px) {
+	.box{
+		width: 100%;
+		margin: 0 0 0 2vw;
+		padding: 0 0 0 10vw !important;
+	}
+}
